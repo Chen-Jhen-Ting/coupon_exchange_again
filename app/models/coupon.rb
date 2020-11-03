@@ -1,6 +1,10 @@
 class Coupon < ApplicationRecord
   belongs_to :user
 
+  validates :name , presence: {message: '姓名不可為空' }
+  validates :phone, presence: {message: '手機號碼不可為空' }
+
+  
   before_create :create_uuid
  
   private
