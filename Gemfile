@@ -55,3 +55,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # user system
 gem 'devise', '~> 4.2'
+
+# twid validates
+gem 'taiwanese_id_validator', '~> 0.0.1'
