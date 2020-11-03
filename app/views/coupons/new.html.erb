@@ -1,1 +1,20 @@
-<h1>兌換卷</h1>
+<h1>兌換卷申請區</h1>
+
+<%= form_for(@coupon ,url: coupon_path ) do |f| %>
+  <div >
+    <%= f.label :name, "姓名" %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div >
+    <%= f.label :twid, "身分證字號" %>
+    <%= f.text_field :twid %>
+  </div>
+
+  <div >
+    <%= f.label :phone, "手機號碼" %>
+    <%= f.text_field :phone %>
+  </div>
+
+  <%= f.submit "送出" %>
+<% end %>
