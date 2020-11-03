@@ -91,5 +91,17 @@ RSpec.describe Coupon, type: :model do
     end
   end
 
-  
+  describe 'Coupon uuid generator' do
+    context 'when user creates a coupon' do
+      it 'should be exist' do
+        coupon = user.create_coupon(
+          name: Faker::Name.name,
+          phone: Faker::PhoneNumber.cell_phone,
+          twid: TwidGenerator.generate
+        )
+        expect(coupon.uuid).not_to eq("")
+        expect(coupon.uuid).to be_present
+      end
+    end
+  end
 end
