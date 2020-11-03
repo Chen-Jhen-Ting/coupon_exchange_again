@@ -1,5 +1,13 @@
 <h1>兌換卷申請區</h1>
 
+<% if @coupon.errors.any? %>
+  <ul>
+  <% @coupon.errors.messages.values.each do |message| %>
+    <li><%= message[0] %></li>
+  <% end %>
+  </ul>
+<% end %>
+
 <%= form_for(@coupon ,url: coupon_path ) do |f| %>
   <div >
     <%= f.label :name, "姓名" %>
