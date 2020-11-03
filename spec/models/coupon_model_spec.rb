@@ -104,4 +104,17 @@ RSpec.describe Coupon, type: :model do
       end
     end
   end
+
+  describe 'Coupon table' do
+    context 'well maintain coupon table' do
+      it 'should contain id, name, phone, twid, uuid' do
+        columns = Coupon.column_names
+        expect(columns).to include("id")
+        expect(columns).to include("name")
+        expect(columns).to include("phone")
+        expect(columns).to include("twid")
+        expect(columns).to include("uuid")
+      end
+    end
+  end
 end
