@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   root to: "home#index"
 
   get '/coupon', to: "coupons#new"
-  post '/coupon', to: "coupons#new"
+  post '/coupon', to: "coupons#create"
 end
