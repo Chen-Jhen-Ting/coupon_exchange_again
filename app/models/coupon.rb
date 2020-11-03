@@ -20,7 +20,7 @@ class Coupon < ApplicationRecord
   def check_whether_got_coupon
     coupon = Coupon.find_by(user_id: user_id)
     if coupon
-      errors.add(:uniq_user, "您已於兌換過#{coupon.created_at.strftime('%Y年 %m月 %d日 %T')}")
+      errors.add(:uniq_user, "您已於#{coupon.created_at.strftime('%Y年 %m月 %d日 %T')}兌換過")
     end
   end
 end
